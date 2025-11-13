@@ -1,4 +1,8 @@
-#include dactyl_manuform.dtsi"
+#include "dactyl_manuform.dtsi"
+
+&default_transform {
+    col-offset = <7>;
+};
 
 &kscan0 {
     col-gpios

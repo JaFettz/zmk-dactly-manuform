@@ -1,0 +1,28 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { // Layer 0
+            // -------------------------------------
+            // |    ESC    |     1     |     2     |     3     |     4     |     5     |     6     | || |     7     |     8     |     9     |     0     |     -     |     =     |     `     |
+            // |    TAB    |     Q     |     W     |     F     |     P     |     B     |     [     | || |     ]     |     J     |     L     |     U     |     Y     |     ;     |     \     |
+            // | Left CTRL |     A     |     R     |     S     |     T     |     G     |     K     | || |     Z     |     M     |     N     |     E     |     I     |     O     |     '     |
+            // |   L Shift |     Z     |     X     |     C     |     D     |     V     |             ||             |     K     |     H     |     ,     |     .     |     /     |  R Shift  |
+            // | Caps Lock | Left Meta |     -     |     +     |                                     ||                                     |     ⭠     |     ⭣     |     ⭡     |     ⭢     |
+            //                                                 |     K     |     M     |     K     | || |     Z     |     M     |     K     |                                                
+            //                                                 |     K     |     M     |     K     | || |     Z     |     M     |     K     |                                                
+            bindings = <
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4   &kp N5   &kp N6       &kp N7   &kp N8   &kp N9   &kp N0    &kp MINUS &kp EQUAL &kp GRAVE
+                &kp TAB   &kp Q     &kp W    &kp F    &kp P    &kp B    &kp LBKT     &kp RBKT &kp J    &kp L    &kp U     &kp Y     &kp SEMI  &kp BSLH
+                &kp LCTRL &kp A     &kp R    &kp S    &kp T    &kp G    &kp K        &kp Z    &kp M    &kp N    &kp E     &kp I     &kp O     &kp SQT
+                &kp LSHFT &kp Z     &kp X    &kp C    &kp D    &kp V                          &kp K    &kp H    &kp COMMA &kp DOT   &kp SLASH &kp RSHFT
+                &kp CAPS  &kp LMETA &kp -    &kp +                                                              &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+                                                    &kp K    &kp M    &kp K          &kp Z    &kp M    &kp K                                    
+                                                    &kp K    &kp M    &kp K          &kp Z    &kp M    &kp K                                    
+            >;
+        };
+    };
+ };
